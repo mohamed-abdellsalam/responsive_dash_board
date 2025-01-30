@@ -4,7 +4,11 @@ import 'package:dash_board/widgets/all_expenses_item_header.dart';
 import 'package:flutter/material.dart';
 
 class AllExpensesItem extends StatelessWidget {
-  const AllExpensesItem({super.key, required this.itemModel});
+  const AllExpensesItem({
+    super.key,
+    required this.itemModel,
+  });
+
   final AllExpensesItemModel itemModel;
   @override
   Widget build(BuildContext context) {
