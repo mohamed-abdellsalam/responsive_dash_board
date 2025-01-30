@@ -1,4 +1,5 @@
 import 'package:dash_board/widgets/custom_background_container.dart';
+import 'package:dash_board/widgets/lateset_transction_list_view.dart';
 import 'package:dash_board/widgets/quick_invoice_header.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,7 @@ class QuickInvoice extends StatelessWidget {
         child: Column(
       children: [
         QuickInvoiceHeader(),
+        LatsetTransctionListView(),
       ],
     ));
   }
