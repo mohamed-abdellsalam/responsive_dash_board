@@ -1,23 +1,25 @@
 import 'package:dash_board/utils/app_styles.dart';
-import 'package:dash_board/widgets/lateset_transction_list_view.dart';
+import 'package:dash_board/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
-class LatestTransction extends StatelessWidget {
-  const LatestTransction({super.key});
-
+class TitleTextFiled extends StatelessWidget {
+  const TitleTextFiled({super.key, required this.title, required this.hint});
+  final String title, hint;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Latest Transaction',
+          'Customer name',
           style: AppStyles.styleMedium16(context),
         ),
         const SizedBox(
-          height: 16,
+          height: 12,
         ),
-        const LatsetTransctionListView(),
+        CustomTextField(
+          hint: hint,
+        ),
       ],
     );
   }
