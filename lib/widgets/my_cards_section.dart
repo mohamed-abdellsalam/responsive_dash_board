@@ -35,8 +35,14 @@ class _MyCardsSectionState extends State<MyCardsSection> {
             style: AppStyles.styleSemiBold20(context),
           ),
         ),
+        const SizedBox(
+          height: 20,
+        ),
         MyCardsPageView(
           pageController: pageController,
+        ),
+        const SizedBox(
+          height: 20,
         ),
         DotsIndicator(
           currentPageIndex: currentPageIndex,
