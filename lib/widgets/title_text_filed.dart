@@ -2,8 +2,9 @@ import 'package:dash_board/utils/app_styles.dart';
 import 'package:dash_board/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
-class TitleTextFiled extends StatelessWidget {
-  const TitleTextFiled({super.key, required this.title, required this.hint});
+class TitleTextField extends StatelessWidget {
+  const TitleTextField({super.key, required this.title, required this.hint});
+
   final String title, hint;
   @override
   Widget build(BuildContext context) {

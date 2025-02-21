@@ -3,24 +3,22 @@ import 'package:dash_board/utils/app_images.dart';
 import 'package:dash_board/widgets/user_info_list_tile.dart';
 import 'package:flutter/material.dart';
 
-class LatsetTransctionListView extends StatelessWidget {
-  const LatsetTransctionListView({super.key});
+class LatestTransctionListView extends StatelessWidget {
+  const LatestTransctionListView({super.key});
+
   static const items = [
     UserInfoModel(
-      image: Assets.imagesAvatar1,
-      title: 'Madrani Andi',
-      subTitle: 'Madraniadi20@gmail',
-    ),
+        image: Assets.imagesAvatar1,
+        title: 'Madrani Andi',
+        subTitle: 'Madraniadi20@gmail'),
     UserInfoModel(
-      image: Assets.imagesAvatar2,
-      title: 'Madrani Andi',
-      subTitle: 'Madraniadi20@gmail',
-    ),
+        image: Assets.imagesAvatar2,
+        title: 'Madrani Andi',
+        subTitle: 'Madraniadi20@gmail'),
     UserInfoModel(
-      image: Assets.imagesAvatar3,
-      title: 'Madrani Andi',
-      subTitle: 'Madraniadi20@gmail',
-    ),
+        image: Assets.imagesAvatar3,
+        title: 'Madrani Andi',
+        subTitle: 'Madraniadi20@gmail'),
   ];
   @override
   Widget build(BuildContext context) {
@@ -33,7 +31,7 @@ class LatsetTransctionListView extends StatelessWidget {
             .toList(),
       ),
     );
-    // SizedBox(
+    // return SizedBox(
     //   height: 80,
     //   child: ListView.builder(
     //       scrollDirection: Axis.horizontal,

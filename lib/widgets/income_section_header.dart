@@ -16,17 +16,11 @@ class IncomeSectionHeader extends StatelessWidget {
           style: AppStyles.styleSemiBold20(context),
         ),
         Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 16,
-            vertical: 12,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           decoration: ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(
-              side: const BorderSide(
-                width: 1,
-                color: Color(0xfff1f1f1),
-              ),
+              side: const BorderSide(width: 1, color: Color(0xFFF1F1F1)),
               borderRadius: BorderRadius.circular(12),
             ),
           ),

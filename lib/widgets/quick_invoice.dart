@@ -19,7 +19,7 @@ class QuickInvoice extends StatelessWidget {
             height: 48,
             color: Color(0xfff1f1f1),
           ),
-          QuickINvoiceForm(),
+          QuickInvoiceForm(),
         ],
       ),
     );

@@ -4,12 +4,13 @@ import 'package:flutter/material.dart';
 
 class TransctionItem extends StatelessWidget {
   const TransctionItem({super.key, required this.transctionModel});
+
   final TransctionModel transctionModel;
   @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 0,
-      color: const Color(0xfffafafa),
+      color: const Color(0xFFFAFAFA),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       ),
@@ -20,15 +21,16 @@ class TransctionItem extends StatelessWidget {
         ),
         subtitle: Text(
           transctionModel.date,
-          style: AppStyles.styleRegular16(context)
-              .copyWith(color: const Color(0xffaaaaaa)),
+          style: AppStyles.styleRegular16(context).copyWith(
+            color: const Color(0xFFAAAAAA),
+          ),
         ),
         trailing: Text(
           transctionModel.amount,
           style: AppStyles.styleSemiBold20(context).copyWith(
-            color: transctionModel.isWithdrawa
-                ? const Color(0xfff3735e)
-                : const Color(0xff7cd87a),
+            color: transctionModel.isWithdrawal
+                ? const Color(0xFFF3735E)
+                : const Color(0xFF7CD87A),
           ),
         ),
       ),

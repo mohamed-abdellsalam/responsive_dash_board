@@ -2,32 +2,39 @@ import 'package:dash_board/utils/app_styles.dart';
 import 'package:dash_board/widgets/transction_history_list_view.dart';
 import 'package:flutter/material.dart';
 
-class TransctionHistory extends StatelessWidget {
-  const TransctionHistory({super.key});
+class TrasnctionHistory extends StatelessWidget {
+  const TrasnctionHistory({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const TransctionHeaderHistory(),
-        const SizedBox(
+        TansctionHistoryHeader(),
+        SizedBox(
           height: 20,
         ),
         Text(
           '13 April 2022',
-          style: AppStyles.styleMedium16(context).copyWith(
-            color: const Color(0xffaaaaaa),
+          style: TextStyle(
+            color: Color(0xFFAAAAAA),
+            fontSize: 16,
+            fontFamily: 'Montserrat',
+            fontWeight: FontWeight.w500,
+            height: 0,
           ),
         ),
-        const TransctionHistoryListView()
+        SizedBox(
+          height: 16,
+        ),
+        TransctionHistoryListView(),
       ],
     );
   }
 }
 
-class TransctionHeaderHistory extends StatelessWidget {
-  const TransctionHeaderHistory({
+class TansctionHistoryHeader extends StatelessWidget {
+  const TansctionHistoryHeader({
     super.key,
   });
 
@@ -43,9 +50,9 @@ class TransctionHeaderHistory extends StatelessWidget {
         Text(
           'See all',
           style: AppStyles.styleMedium16(context).copyWith(
-            color: const Color(0xff4eb7f2),
+            color: const Color(0xFF4EB7F2),
           ),
-        ),
+        )
       ],
     );
   }

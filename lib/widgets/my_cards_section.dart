@@ -13,13 +13,16 @@ class MyCardsSection extends StatefulWidget {
 class _MyCardsSectionState extends State<MyCardsSection> {
   late PageController pageController;
   int currentPageIndex = 0;
+
   @override
   void initState() {
     pageController = PageController();
+
     pageController.addListener(() {
       currentPageIndex = pageController.page!.round();
       setState(() {});
     });
+
     super.initState();
   }
 
