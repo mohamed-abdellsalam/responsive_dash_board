@@ -1,3 +1,4 @@
+import 'package:dash_board/utils/size_confing.dart';
 import 'package:dash_board/widgets/adaptive_layout_widget.dart';
 import 'package:dash_board/widgets/custom_drawer.dart';
 import 'package:dash_board/widgets/dashboard_desktop_layout.dart';
@@ -16,9 +17,10 @@ class _DashBoardViewState extends State<DashBoardView> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
+    SizeConfing.init(context);
     return Scaffold(
       key: scaffoldKey,
-      appBar: MediaQuery.sizeOf(context).width < 800
+      appBar: MediaQuery.sizeOf(context).width < SizeConfing.tablet
           ? AppBar(
               elevation: 0,
               backgroundColor: const Color(0xfffafafa),
@@ -31,8 +33,9 @@ class _DashBoardViewState extends State<DashBoardView> {
             )
           : null,
       backgroundColor: const Color(0xfff7f9fa),
-      drawer:
-          MediaQuery.sizeOf(context).width < 800 ? const CustomDrawer() : null,
+      drawer: MediaQuery.sizeOf(context).width < SizeConfing.tablet
+          ? const CustomDrawer()
+          : null,
       body: AdaptiveLayout(
         mobileLayout: (context) => const DashBoardMobilLayout(),
         tabletLayout: (context) => const DashboardTabletLayout(),
