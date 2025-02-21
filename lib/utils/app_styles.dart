@@ -1,3 +1,4 @@
+import 'package:dash_board/utils/size_confing.dart';
 import 'package:flutter/material.dart';
 
 abstract class AppStyles {
@@ -89,5 +90,31 @@ abstract class AppStyles {
       fontFamily: 'Montserrat',
       fontWeight: FontWeight.w600,
     );
+  }
+}
+
+double getResponsiveFontSize(context, {required double fontSize}) {
+  double scaleFactor = getScaleFactor(context);
+  double responsiveFontSize = fontSize * scaleFactor;
+
+  double lowerLimit = fontSize * .8;
+  double upperLimit = fontSize * 1.2;
+
+  return responsiveFontSize.clamp(lowerLimit, upperLimit);
+}
+
+double getScaleFactor(context) {
+  // var dispatcher = PlatformDispatcher.instance;
+  // var physicalWidth = dispatcher.views.first.physicalSize.width;
+  // var devicePixelRatio = dispatcher.views.first.devicePixelRatio;
+  // double width = physicalWidth / devicePixelRatio;
+
+  double width = MediaQuery.sizeOf(context).width;
+  if (width < SizeConfing.tablet) {
+    return width / 550;
+  } else if (width < SizeConfing.desktop) {
+    return width / 1000;
+  } else {
+    return width / 1920;
   }
 }
